@@ -35,7 +35,7 @@ void signUp() {
     WebElement telephoneInputField =driver.findElement(By.id("sda_user_registration_form_phone"));
     WebElement password1InputField =driver.findElement(By.id("sda_user_registration_form_plainPassword_first"));
     WebElement password2InputField =driver.findElement(By.id("sda_user_registration_form_plainPassword_second"));
-    WebElement agreeMark = driver.findElement(By.className("checkbox--arrow"));
+    WebElement agreeMark = driver.findElement(By.xpath("//label[@for='access-offer'][1]"));
     WebElement registerBtn = driver.findElement(By.id("_register-submit"));
 
 

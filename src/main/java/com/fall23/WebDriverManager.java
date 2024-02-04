@@ -30,23 +30,23 @@ public class WebDriverManager {
     }
 
     public static WebElement findElementById (String id){
-        element = driver.findElement(By.id(id));
-        return element;
+        return driver.findElement(By.id(id));
+
     }
 
     public static WebElement findElementByClassName (String className){
-        element = driver.findElement(By.className(className));
-        return element;
+        return driver.findElement(By.className(className));
+
     }
 
     public static WebElement findElementByLinkedText (String link){
-        element = driver.findElement(By.linkText(link));
-        return  element;
+        return driver.findElement(By.linkText(link));
+
 
     }
 
     public static WebElement findElementPartialText (String partialText){
-        element = driver.findElement(By.partialLinkText(partialText));
-        return element;
+        return driver.findElement(By.partialLinkText(partialText));
+
     }
 }

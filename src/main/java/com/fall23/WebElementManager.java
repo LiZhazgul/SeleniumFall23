@@ -6,8 +6,10 @@ import org.openqa.selenium.WebDriver;
 import static com.fall23.WebDriverManager.driver;
 
 public class WebElementManager {
-//    public static WebDriver driver;
-//   public static void scrollPage(){
-//
-//   }
+
+   public static void scrollPageDown(){
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("window.scrollBy(0, 600)");
+
+  }
 }
