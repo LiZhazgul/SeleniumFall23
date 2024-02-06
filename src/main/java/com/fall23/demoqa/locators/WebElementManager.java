@@ -1,9 +1,8 @@
-package com.fall23;
+package com.fall23.demoqa.locators;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 
-import static com.fall23.WebDriverManager.driver;
+import static com.fall23.demoqa.locators.WebDriverManager.driver;
 
 public class WebElementManager {
 

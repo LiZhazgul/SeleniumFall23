@@ -1,17 +1,14 @@
-package com.fall23.locators.hw;
+package com.fall23.demoqa.locators.hw;
 
-import com.fall23.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-import static com.fall23.WebDriverManager.driver;
-import static com.fall23.WebDriverManager.openTheSite;
+import static com.fall23.demoqa.locators.WebDriverManager.driver;
 
 public class NambafoodLogin {
 

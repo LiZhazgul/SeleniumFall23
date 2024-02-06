@@ -1,11 +1,11 @@
-package com.fall23.locators.hw;
+package com.fall23.demoqa.locators.hw;
 
-import com.fall23.BaseTest;
+import com.fall23.demoqa.locators.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import static com.fall23.WebDriverManager.openTheSite;
+import static com.fall23.demoqa.locators.WebDriverManager.openTheSite;
 
 public class GitHub extends BaseTest {
     @Test

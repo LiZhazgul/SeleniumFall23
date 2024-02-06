@@ -1,4 +1,4 @@
-package com.fall23;
+package com.fall23.demoqa.locators;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

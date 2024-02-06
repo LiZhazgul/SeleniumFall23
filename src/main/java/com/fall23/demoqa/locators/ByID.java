@@ -1,13 +1,10 @@
-package com.fall23.locators;
-import com.fall23.BaseTest;
-import com.fall23.WebDriverManager;
-import org.openqa.selenium.By;
+package com.fall23.demoqa.locators;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import static com.fall23.WebDriverManager.findElementById;
-import static com.fall23.WebDriverManager.openTheSite;
+import static com.fall23.demoqa.locators.WebDriverManager.findElementById;
+import static com.fall23.demoqa.locators.WebDriverManager.openTheSite;
 
 public class ByID extends BaseTest {
     @Test
