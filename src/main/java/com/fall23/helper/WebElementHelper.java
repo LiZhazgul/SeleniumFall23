@@ -3,12 +3,13 @@ package com.fall23.helper;
 import com.fall23.ui.drivers.Driver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class WebElementHelper {
+
     // метод Chaining
     //Chain of invocation -паттерн
     public WebElementHelper waitForButtonToBeClickAble(WebElement element){
@@ -43,4 +44,8 @@ public class WebElementHelper {
         js.executeScript("arguments[0].scrollIntoView(true);",element);
         return this;
     }
+
+
+
+
 }
