@@ -7,12 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class TextBoxPage {
-
+    //Page Object Model --> pattern
+    //создаем конструктор и внутрь передаем PageFactory
     public TextBoxPage (){
+        // this означает текущий класс
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id ="userName")
+    @FindBy(id ="userName")// аннотация  @FindBy не будет работать без PageFactory.initElements
     public WebElement fullNameInput;
 
     @FindBy(id ="userEmail")
@@ -26,24 +28,28 @@ public class TextBoxPage {
 
     @FindBy(id ="submit")
     public WebElement submitBtn;
+
+    //Создали объект класса WebElementHelper, чтобы вызвать его методы
     WebElementHelper webElementHelper = new WebElementHelper();
+
+
     public TextBoxPage fillUpFullName(String fullName){
 
-        webElementHelper.sendKeysCustomn(fullNameInput,fullName);
+        webElementHelper.sendKeysCustom(fullNameInput,fullName);
         return this;
     }
 
     public TextBoxPage fillUpEmail (String email){
-        webElementHelper.sendKeysCustomn(emailInput,email);
+        webElementHelper.sendKeysCustom(emailInput,email);
         return this;
     }
 
     public TextBoxPage fillUpCurrentAddress (String address){
-        webElementHelper.sendKeysCustomn(currentAddress,address);
+        webElementHelper.sendKeysCustom(currentAddress,address);
         return this;
     }
     public TextBoxPage fillUpPermanentAddress (String address){
-        webElementHelper.sendKeysCustomn(permanentAddress,address);
+        webElementHelper.sendKeysCustom(permanentAddress,address);
         return this;
     }
     public TextBoxPage clickSubmitBtn() {

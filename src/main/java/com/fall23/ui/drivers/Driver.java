@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 public class Driver {
 
     private Driver() {
-
+//Singleton pattern-->значит все методы будут static,так как будем обращаться через
+// название класса
     }
 
     private static WebDriver driver;
@@ -22,6 +23,7 @@ public class Driver {
                     break;
                 case "edge":
                     driver = EdgeWebDriver.loadEdgeDriver();
+                    break;
                 default:
                     throw new IllegalArgumentException("You provided wrong Driver name");
             }
@@ -35,6 +37,7 @@ public class Driver {
             if (driver!=null){
                 driver.close();
                 driver.quit();
+                //присваиваем null,для того чтобы потом использовать метод switch выше
                 driver=null;
             }
         }catch (Exception e){

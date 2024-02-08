@@ -12,6 +12,7 @@ public class WindowHelper {
 
 
     public Set<String> getWindowHandles() {
+        //
         return Driver.getDriver().getWindowHandles();
     }
 
