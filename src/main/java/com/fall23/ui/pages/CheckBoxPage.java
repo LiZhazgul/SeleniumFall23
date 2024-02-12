@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckBoxPage {
-    WebElementHelper webElementHelper = new WebElementHelper();
+
 
     public CheckBoxPage() {
         PageFactory.initElements(Driver.getDriver(), this);

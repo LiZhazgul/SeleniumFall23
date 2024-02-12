@@ -16,11 +16,18 @@ public class WindowHelperTest {
         driver.get("https://demoqa.com/browser-windows");
 
         //три раза кликнет кнопку tab
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             windowsPage.newTabBtn.click();
             Thread.sleep(1500);
         }
+        windowHelper.switchToWindow(5);
+        Thread.sleep(2000);
+
+        windowHelper.switchToParent();
+        Thread.sleep(2000);
+
         windowHelper.switchToParentWithChildClose();
+        Thread.sleep(2000);
 
 
     }
