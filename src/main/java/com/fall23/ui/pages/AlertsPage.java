@@ -27,5 +27,11 @@ public class AlertsPage {
     @FindBy(css = "#promtButton")
     public WebElement btnClickPromtBox;
 
+    @FindBy(id = "confirmResult")
+    public WebElement confirmResult;
+
+    @FindBy(id = "promptResult")
+    public WebElement promtResult;
+
 
 }

@@ -6,6 +6,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 public class AlertTest {
     WebDriver driver;
     AlertHelper alertHelper;
@@ -32,17 +35,21 @@ public class AlertTest {
         alertHelper.acceptAlert();
         alertsPage.btnClickConfirmBox.click();
         Thread.sleep(2000);
-        alertHelper.acceptAlert();
+        alertHelper.dismissAlert();
+        Thread.sleep(2000);
         //assert не работает
-//        String actualAlertMessage = driver.findElement(By.xpath("//span[text()='You selected ']")).getText();
-//        String expectedAlertMessage ="You selected ";
-//        assertEquals(actualAlertMessage,expectedAlertMessage);
+
+        assertTrue(alertsPage.confirmResult.getText().contains("Cancel"));
+        Thread.sleep(2000);
+
 
         alertsPage.btnClickPromtBox.click();
         Thread.sleep(3000);
         alertHelper.sendKeysAlert("Hello");
         Thread.sleep(3000);
         alertHelper.acceptAlert();
+        assertTrue(alertsPage.promtResult.getText().contains("Hello"));
+        Thread.sleep(4000);
 
 
     }
