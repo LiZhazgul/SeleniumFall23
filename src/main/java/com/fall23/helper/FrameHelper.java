@@ -21,7 +21,6 @@ public class FrameHelper {
     }
 
     public FrameHelper switchToFrame (WebElement element){
-
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
         return this;
     }
