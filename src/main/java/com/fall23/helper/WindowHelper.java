@@ -41,6 +41,10 @@ public class WindowHelper {
             Driver.getDriver().close();
         }
         switchToParent();
+
+
     }
+
+
 
 }

@@ -29,6 +29,8 @@ public class WindowHelperTest {
         windowHelper.switchToParentWithChildClose();
         Thread.sleep(2000);
 
+        Driver.closeDriver();
+
 
     }
 }
