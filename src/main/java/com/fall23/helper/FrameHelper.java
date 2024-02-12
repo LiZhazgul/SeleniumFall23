@@ -15,22 +15,22 @@ public class FrameHelper {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    public FrameHelper (WebDriver driver){
-        this.driver=driver;
+    public FrameHelper(WebDriver driver) {
+        this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public FrameHelper switchToFrame (WebElement element){
+    public FrameHelper switchToFrame(WebElement element) {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
         return this;
     }
 
-    public FrameHelper switchToParentFrame (){
+    public FrameHelper switchToParentFrame() {
         driver.switchTo().parentFrame();
         return this;
     }
 
-    public FrameHelper switchByIndex (int index){
+    public FrameHelper switchByIndex(int index) {
         driver.switchTo().frame(index);
         return this;
     }

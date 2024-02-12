@@ -7,15 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FramePage {
 
-    public FramePage (){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public FramePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy (id = "frame1")
+
+    @FindBy(id = "frame1")
     public WebElement frame1;
 
-    @FindBy (id = "frame2")
+    @FindBy(id = "frame2")
     public WebElement frame2;
 
-    @FindBy (id = "sampleHeading")
+    @FindBy(id = "sampleHeading")
     public WebElement textElement;
 }
