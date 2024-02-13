@@ -1,18 +1,18 @@
 import com.fall23.helper.WindowHelper;
 import com.fall23.ui.drivers.Driver;
 import com.fall23.ui.pages.WindowsPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 public class WindowHelperTest {
-    WindowsPage windowsPage =new WindowsPage();
+    WindowsPage windowsPage = new WindowsPage();
     WindowHelper windowHelper = new WindowHelper();
+    WebDriver driver = Driver.getDriver();
+
     @Test
     void test213() throws InterruptedException {
 
-        WebDriver driver = Driver.getDriver();
         driver.get("https://demoqa.com/browser-windows");
 
         //три раза кликнет кнопку tab
@@ -29,8 +29,28 @@ public class WindowHelperTest {
         windowHelper.switchToParentWithChildClose();
         Thread.sleep(2000);
 
-        Driver.closeDriver();
-
-
     }
+
+    @Test
+    public void secondBtn() throws InterruptedException {
+        driver.get("https://demoqa.com/browser-windows");
+        for (int i = 0; i < 2; i++) {
+            windowsPage.newWindowBtn.click();
+            Thread.sleep(2000);
+        }
+        windowHelper.switchToParentWithChildClose();
+    }
+
+    @Test
+    public void thirdBtn() {
+        driver.get("https://demoqa.com/browser-windows");
+        windowsPage.newWindowMsgBtn.click();
+        windowHelper.switchToParentWithChildClose();
+    }
+
+    @AfterClass
+    public void browClose() {
+        Driver.closeDriver();
+    }
+
 }

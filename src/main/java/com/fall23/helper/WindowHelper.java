@@ -1,5 +1,4 @@
 package com.fall23.helper;
-
 import com.fall23.ui.drivers.Driver;
 import java.util.LinkedList;
 import java.util.Set;
@@ -11,6 +10,7 @@ public class WindowHelper {
         //
         return Driver.getDriver().getWindowHandles();
     }
+
     //переключиться какой-то окошке, переключаемся по индексу
     //поэтому параметр передаем int index
     public void switchToWindow(int index) {
@@ -36,7 +36,7 @@ public class WindowHelper {
         switchToParent();
         LinkedList<String> windowsId = new LinkedList<>(getWindowHandles());
 
-        for (int i = 1; i < windowsId.size(); i++){
+        for (int i = 1; i < windowsId.size(); i++) {
             Driver.getDriver().switchTo().window(windowsId.get(i));
             Driver.getDriver().close();
         }
@@ -44,7 +44,4 @@ public class WindowHelper {
 
 
     }
-
-
-
 }
