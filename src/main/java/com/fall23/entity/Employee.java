@@ -26,7 +26,10 @@ public class Employee {
 
 
     public static ArrayList <Employee> getEmployeesFromTable(WebDriver driver){
+        //find the table rows
         List< WebElement> rows =driver.findElements(By.cssSelector(".ReactTable .rt-tr-group"));
+
+        //пополнить контейнер объектами
         ArrayList<Employee> employees =new ArrayList<>();
 
         for (WebElement row : rows){

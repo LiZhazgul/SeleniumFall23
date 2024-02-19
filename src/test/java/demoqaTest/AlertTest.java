@@ -1,3 +1,5 @@
+package demoqaTest;
+
 import com.fall23.helper.AlertHelper;
 import com.fall23.ui.drivers.Driver;
 import com.fall23.ui.pages.AlertsPage;

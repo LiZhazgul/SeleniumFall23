@@ -1,9 +1,16 @@
+package demoqaTest;
+
 import com.fall23.helper.WindowHelper;
 import com.fall23.ui.drivers.Driver;
 import com.fall23.ui.pages.WindowsPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
+
+import java.util.Set;
 
 public class WindowHelperTest {
     WindowsPage windowsPage = new WindowsPage();
@@ -47,6 +54,31 @@ public class WindowHelperTest {
         windowsPage.newWindowMsgBtn.click();
         windowHelper.switchToParentWithChildClose();
     }
+    @Test
+    public void childWindowTextAssert() throws InterruptedException {
+        driver.get("https://demoqa.com/browser-windows");
+        String parentHandle = driver.getWindowHandle();
+        System.out.println("parent window -" + parentHandle);
+        windowsPage.newWindowMsgBtn.click();
+        Set<String> handles = driver.getWindowHandles();
+        for (String handle : handles){
+            System.out.println("handle -" +handle);
+            if (!handle.equals(parentHandle)){
+                driver.switchTo().window(handle);
+                ///html/body
+                WebElement text = driver.findElement(By.xpath("//body[text()='Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.']"));
+                String act =text.getText();
+                Assert.assertEquals(act,"Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.");
+                Thread.sleep(2000);
+                driver.close();
+            }
+        }
+        driver.switchTo().window(parentHandle);
+        windowsPage.newWindowBtn.click();
+        Thread.sleep(2000);
+        driver.quit();
+    }
+
 
     @AfterClass
     public void browClose() {

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/User/Documents/Zhazgul Ucheba/SeleniumFall23">
+        <classes>
+            <class name="demoqaTest.EmployeesTableTest">
+        <methods>
+            <include name="test123"/>
+        </methods>
+    </class>
+        <class name="demoqaTest.DemoTest">
+            <methods>
+                <include name="byIdTest"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.ByXpathDemo">
+            <methods>
+                <include name="demo"/>
+                <include name="orangeHRM_login"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.CssSelectorDemo">
+            <methods><include name="demo123"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.DownloadFileTest">
+            <methods>
+                <include name="downloadTest"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.ExpediaSite">
+            <methods>
+                <include name="findElements"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.LinkedTextTest">
+            <methods><include name="test123"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.OrangeHRMLoginTest">
+            <methods><include name="loginWithValidUserNameAndValidPasswordTest"/>
+                <include name="loginWithValidUserAndInvalidPassTest"/>
+                include name="loginWithInvalidUsernameAndValidPassword"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.PartialLinkTest"><methods>
+            <include name="demo"/>
+        </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.hw.CheckBox">
+            <methods>
+                <include name="checkBox"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.hw.GitHub">
+            <methods>
+                <include name="gitHub"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.hw.NambafoodLogin">
+            <methods>
+                <include name="signUp"/>
+            </methods>
+        </class>
+        <class name="com.fall23.demoqa.locators.mouseInteractions.AdvancedMouseInteractions">
+            <methods><include name="demo56"/><include name="rightClick"/><include name="dynamicClickTest"/></methods></class><class name="com.fall23.demoqa.locators.waits.ExplicitWaitExamples"><methods><include name="waitForElementToBeClickAble"/></methods></class><class name="com.fall23.demoqa.locators.youtube.Youtube"><methods><include name="youtube"/></methods></class><class name="demoqaTest.AlertTest"><methods><include name="clickAndAcceptTest"/></methods></class><class name="demoqaTest.ButtonsTest"><methods><include name="BtnTests"/></methods></class><class name="demoqaTest.CheckBoxTest"><methods><include name="clickToBtnIcon"/></methods></class><class name="demoqaTest.EmployeesTableTest"><methods><include name="test123"/></methods></class><class name="demoqaTest.FrameTest"><methods><include name="frame1Test"/><include name="frame2Test"/></methods></class><class name="demoqaTest.ModalDialogsTest"><methods><include name="smallModalTest"/></methods></class><class name="demoqaTest.RadioButtonTest"><methods><include name="clickRadioBtns"/></methods></class><class name="demoqaTest.SelectDemoTest"><methods><include name="demo1"/></methods></class><class name="demoqaTest.TextBoxTest"><methods><include name="fillUpTheFormPositiveTest"/><include name="fillUpEmailWithIncorrectValue"/></methods></class><class name="demoqaTest.WindowHelperTest"><methods><include name="test213"/><include name="secondBtn"/><include name="thirdBtn"/><include name="childWindowTextAssert"/></methods></class><class name="talentLMSTest.ReportsTest"><methods><include name="test123"/></methods></class></classes></test></suite>

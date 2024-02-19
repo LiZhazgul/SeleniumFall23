@@ -35,6 +35,8 @@ public class WebElementHelper {
 
     public WebElementHelper clickCustom(WebElement element){
         waitForButtonToBeClickAble(element);
+        waitForButtonToBeClickAble(element);
+        scrollToElement(element);
         element.click();
         return this;
     }
